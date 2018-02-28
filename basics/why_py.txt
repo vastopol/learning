@@ -1,0 +1,182 @@
+Python 2.7 for now
+
+#-----------------------
+
+# useful things to know for help
+
+help(<name>)
+
+dir(<name>)		# show methods of object
+
+type(<name>)	# show type of object
+
+#-----------------------
+
+I/O
+
+raw_input() (or input() in python 3.6)
+	always returns a string
+	so then typecast if need some other type
+
+print(<stuff>)
+	will print stuff with newline
+
+#----------------------
+
+conditionals (<, >, <=, >=, ==, !=, and, or, not)
+
+branching using (if, elif, else)
+
+if a < 5:
+	do_thing
+elif a = 6:
+	do_thing_2
+else:
+	do_thing_3
+
+#-----------------------
+
+loops
+
+while and for
+
+while condition:
+	stuff
+
+for loop usually used to iterate over a container
+
+#----------------------
+
+lists
+ordered collection of data, defined with brackets [] separate with commas
+can contain mixed types
+can declare [] as empty list
+
+list = ["a", "b", "c"]
+
+access elements with 
+list[index]
+
+append is an object function
+list.append(<thing>)
+
+number of elements in list
+len(list)
+
+#----------------------
+
+dictionaries  (hashmaps)
+
+defined with curly braces {}
+
+dict = {"key" : "value", "five" : 5}
+
+accessed like a list, but uses key as the index
+print(dict[key])
+
+appended/updated using square brackets
+dict["a key"] = "new value"
+
+#--------------------------
+tuples 
+immutable lists...
+use ()
+#--------------------------
+
+membership operator
+
+use "in"
+
+if "x" in list:
+	something
+
+if "key" not in dict:
+	stuff
+
+used to check if 
+in will only check the keys in a dictionary, not the values
+
+#-----------------------
+for loop
+
+for key in dict:
+	print(key)
+	print(dict[key])
+
+for item in list:
+	print(item)
+
+#-----------------------
+
+files && arguments
+
+open files using open
+
+f = open(filename, mode)
+
+filename is path to file,
+mode is either 'r' read, 'w' write, 'a' append
+
+to read a single line
+
+line = f.readline()
+
+for line in f:
+	iterate on stuff
+
+f.write("write line to file...")
+
+close the file
+f.close()
+
+#---------------------
+
+functions
+
+3 major parts, name, parameters, return
+
+returns are optional, also can return multiple things
+
+ret = function(params)
+
+ret = obj.function(params)
+
+define functions with def
+
+def multiply(a,b):
+	return a * b
+
+#-------------------------
+
+packages
+
+import package_name
+
+will import previously existing code or packages
+
+to call an imported function 
+package_name.function()
+
+import math
+print(math.fabs(-3.14))
+
+#--------------------------
+
+system
+
+import sys
+
+allows to access comand line interface
+special argv variable for command line input parameters
+
+$ python prgm.py sean rich
+
+import sys
+print("hello" + sys.argv[1] + sys.argv[2])
+
+#---------------------------
+
+reverse a string
+
+word = word[::-1] # reverse order
+

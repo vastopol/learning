@@ -1,2 +1,7 @@
-# learning
-machine learning stuff
+# Python stuff
+
+python programming:
+- functional programming
+- machine learning
+- automation
+

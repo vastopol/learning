@@ -1,0 +1,45 @@
+http://web.mit.edu/6.005/www/fa16/classes/24-map-filter-reduce/
+
+map
+applies a unary function to each element in the sequence and returns a new sequence containing the results, in the same order:
+
+map : (E → F) × Seq<‍E> → Seq<‍F>
+
+#----------------------------------------------------------------------
+
+filter
+
+tests each element with a unary predicate. 
+Elements that satisfy the predicate are kept; those that don’t are removed. 
+A new list is returned; filter doesn’t modify its input list.
+
+filter : (E → boolean) × Seq<‍E> → Seq<‍E>
+
+#----------------------------------------------------------------------
+
+
+reduce : (F × E → F) × Seq<‍E> × F → F
+
+reduce(f, list, init) combines the elements of the list from left to right, as follows:
+
+    result0 = init
+    result1 = f(result0, list[0])
+    result2 = f(result1, list[1])
+    ...
+    resultn = f(resultn-1, list[n-1]) 
+
+resultn is the final result for an n-element list.
+
+(in python reduce a.k.a. fold-left)
+
+#----------------------------------------------------------------------
+
+fold-right : (E × F → F) × Seq<‍E> × F → F
+
+where fold-right(f, list, init) of an n-element list follows this pattern:
+
+    result0 = init
+    result1 = f(list[n-1], result0)
+    result2 = f(list[n-2], result1)
+    ...
+    resultn = f(list[0], resultn-1) 
