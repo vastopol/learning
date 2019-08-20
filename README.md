@@ -1,7 +1,6 @@
-# Python stuff
+# Python
 
-python programming:
-- functional programming
-- machine learning
-- automation
+* algorithms
+* functional programming
+
 
